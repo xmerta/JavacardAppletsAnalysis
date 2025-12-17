@@ -1,0 +1,6 @@
+[submodule "forks/cryptsetup"]
+	path = forks/cryptsetup
+	url = https://github.com/xmerta/cryptsetup-javacard-analysis.git
+[submodule "forks/SigAnima"]
+	path = forks/SigAnima
+	url = https://github.com/xmerta/SigAnima-Analysis.git

@@ -1,0 +1,257 @@
+{
+  "clientRemote": "https://github.com/xmerta/JavacardAppletsAnalysis",
+  "gitRemote": "https://github.com/xmerta/JavacardAppletsAnalysis",
+  "gitSha": "aea8065daa2ee44b4dae4ea020c19ee664d318f1",
+  "treeEntries": [
+    {
+      "label": "1)Does not check if buffer has that many data",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 607,
+          "endLine": 609,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "1)Missing state check",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 613,
+          "endLine": 613,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 625,
+          "endLine": 625,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 558,
+          "endLine": 558,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 568,
+          "endLine": 568,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 542,
+          "endLine": 542,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "1)Incorrect len of data (dos?)",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 413,
+          "endLine": 415,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "1)Leaked data?",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 428,
+          "endLine": 431,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "1)Allocated memory size mismatch",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 271,
+          "endLine": 271,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/cryptsetup/JCKeyStorage/src/applets/KeyStorageApplet.java",
+          "startLine": 150,
+          "endLine": 150,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "2)Comparison is not constant time (Card vendor dependent)",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 350,
+          "endLine": 350,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 388,
+          "endLine": 388,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "2) Wrong Domain parameter check",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 482,
+          "endLine": 483,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "2) Key Id storage size mismatch",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 480,
+          "endLine": 480,
+          "label": "",
+          "description": ""
+        },
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 97,
+          "endLine": 97,
+          "label": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "2) FI - one fault to allow everything",
+      "entryType": 0,
+      "author": "jakub",
+      "details": {
+        "severity": "",
+        "difficulty": "",
+        "type": "",
+        "description": "",
+        "exploit": "",
+        "recommendation": "Short term, \nLong term, \n"
+      },
+      "locations": [
+        {
+          "path": "forks/SigAnima/src/de/tsenger/siganima/applet/SigAnimaApplet.java",
+          "startLine": 729,
+          "endLine": 731,
+          "label": "",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "auditedFiles": [],
+  "partiallyAuditedFiles": [],
+  "resolvedEntries": []
+}
