@@ -4,3 +4,6 @@
 [submodule "forks/SigAnima"]
 	path = forks/SigAnima
 	url = https://github.com/xmerta/SigAnima-Analysis.git
+[submodule "forks/neopgp"]
+	path = forks/neopgp
+	url = https://github.com/mwalle/neopgp
