@@ -7,3 +7,9 @@
 [submodule "forks/neopgp"]
 	path = forks/neopgp
 	url = https://github.com/mwalle/neopgp
+[submodule "FluffyPGP-Applet"]
+	path = FluffyPGP-Applet
+	url = https://github.com/JavaCardOS/FluffyPGP-Applet
+[submodule "forks/FluffyPGP-Applet"]
+	path = forks/FluffyPGP-Applet
+	url = https://github.com/JavaCardOS/FluffyPGP-Applet
