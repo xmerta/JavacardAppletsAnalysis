@@ -1,0 +1,46 @@
+diff --git a/shared/device.mk b/shared/device.mk
+index c9221ec36..eeae0a965 100644
+--- a/shared/device.mk
++++ b/shared/device.mk
+@@ -621,6 +621,9 @@ endif
+  PRODUCT_PACKAGES += \
+     $(LOCAL_KEYMINT_PRODUCT_PACKAGE)
+ 
++PRODUCT_PACKAGES += \
++    android.hardware.keymaster@4.1-strongbox.service \
++
+ # Keymint configuration
+ ifneq ($(LOCAL_PREFER_VENDOR_APEX),true)
+ PRODUCT_COPY_FILES += \
+diff --git a/shared/sepolicy/vendor/file_contexts b/shared/sepolicy/vendor/file_contexts
+index 6c471b8b8..5baf83c4c 100644
+--- a/shared/sepolicy/vendor/file_contexts
++++ b/shared/sepolicy/vendor/file_contexts
+@@ -94,6 +94,7 @@
+ /vendor/bin/hw/android\.hardware\.identity-service\.remote  u:object_r:hal_identity_remote_exec:s0
+ /vendor/bin/hw/android\.hardware\.security\.keymint-service\.remote  u:object_r:hal_keymint_remote_exec:s0
+ /vendor/bin/hw/android\.hardware\.keymaster@4\.1-service.remote  u:object_r:hal_keymaster_remote_exec:s0
++/vendor/bin/hw/android\.hardware\.keymaster@4\.1-strongbox\.service  u:object_r:hal_keymaster_strongbox_exec:s0
+ /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service.remote  u:object_r:hal_gatekeeper_remote_exec:s0
+ /vendor/bin/hw/android\.hardware\.confirmationui@1\.0-service.cuttlefish  u:object_r:hal_confirmationui_cuttlefish_exec:s0
+ /vendor/bin/hw/android\.hardware\.oemlock-service.example u:object_r:hal_oemlock_default_exec:s0
+diff --git a/shared/sepolicy/vendor/hal_keymaster_strongbox.te b/shared/sepolicy/vendor/hal_keymaster_strongbox.te
+new file mode 100644
+index 000000000..40cb82c3f
+--- /dev/null
++++ b/shared/sepolicy/vendor/hal_keymaster_strongbox.te
+@@ -0,0 +1,14 @@
++type hal_keymaster_strongbox, domain;
++hal_server_domain(hal_keymaster_strongbox, hal_keymaster)
++
++type hal_keymaster_strongbox_exec, exec_type, vendor_file_type, file_type;
++init_daemon_domain(hal_keymaster_strongbox)
++
++vndbinder_use(hal_keymaster_strongbox)
++get_prop(hal_keymaster_strongbox, vendor_security_patch_level_prop);
++
++# Allow access to sockets
++allow hal_keymaster_strongbox self:tcp_socket { connect create write read getattr getopt setopt };
++allow hal_keymaster_strongbox port_type:tcp_socket name_connect;
++allow hal_keymaster_strongbox port:tcp_socket { name_connect };
++allow hal_keymaster_strongbox vendor_data_file:file { open read getattr };

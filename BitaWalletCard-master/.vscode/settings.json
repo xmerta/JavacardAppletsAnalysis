@@ -1,0 +1,10 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "cSpell.words": [
+    "Nums",
+    "ecdh",
+    "mseed",
+    "vcode"
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
+}
